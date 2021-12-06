@@ -16,6 +16,11 @@ jobs:
       - name: checkout
         # 使用的 actions/checkout 複製程式碼
         uses: actions/checkout@v2.3.1
+      # 步驟1.5: 設定nodejs 版本為17
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17.0.0'
       # 步驟二：編譯
       - name: Install and Build
         run: |
